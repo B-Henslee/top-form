@@ -3,6 +3,9 @@
     padding: 0;
     margin: 0;
 }
+body{
+    background: #121212;
+}
 .container{
     display: flex;
     flex-direction: row;
@@ -27,7 +30,6 @@
 }
 .upper, .bottom{
     height: 37%;
-    background: #121212;
 }
 .upper{
     display: flex;
@@ -78,15 +80,59 @@
 input:focus{
     border: 5px solid steelblue;
 }
-button{
-    width: 180px;
-    height: 50px;
-    border-radius: 10px;
-    border: none;
-    background-color: #ffffff;
-    font-weight: bold;
-}
 a{
     text-decoration: none;
     color: steelblue;
 }
+@property --gradient-angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+    }
+    
+    :root {
+    --clr-1: #12c2e9;
+    --clr-2: #c471ed;
+    --clr-3: #f64f59;
+    }
+    
+    button{
+    width: 180px;
+    height: 50px;
+    border-radius: 10px;
+    border: 5px solid white;
+    background-color: #ffffff;
+    font-weight: bold;
+    position: relative;
+    }
+    
+    .glow:hover::before,
+    .glow:hover::after {
+    content: "";
+    position: absolute;
+    inset: -0.5rem;
+    z-index: -1;
+    background: conic-gradient(
+            from var(--gradient-angle),
+            var(--clr-1),
+            var(--clr-2),
+            var(--clr-3),
+            var(--clr-2),
+            var(--clr-1)
+    );
+    border-radius: inherit;
+    animation: rotation 5s linear infinite;
+    }
+    
+    .glow::after {
+    filter: blur(3.5rem);
+    }
+    
+    @keyframes rotation {
+    0% {
+            --gradient-angle: 0deg;
+    }
+    100% {
+            --gradient-angle: 360deg;
+    }
+    }
