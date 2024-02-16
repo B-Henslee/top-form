@@ -118,7 +118,9 @@ a{
     font-weight: bold;
     position: relative;
     }
-    
+    button:active{
+        transform:scaleX(1.1);
+    }
     .glow:hover::before,
     .glow:hover::after {
     content: "";
