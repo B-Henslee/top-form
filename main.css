@@ -53,28 +53,34 @@ body{
     width: 75%;
     font-weight:600;
 }
-.middle{
+.middle {
     height: 25%;
     background-color: #1d1d1d;
     padding: 20px 50px;
     display: flex;
     flex-direction: column;
 }
-.middle-container{
+
+.middle-container {
     display: flex;
     flex-direction: column;
 }
-.middle-para{
+
+.middle-para {
     font-size: 22px;
     font-weight: 600;
 }
-.fifty{
+
+.fifty {
     display: flex;
     flex-wrap: wrap;
     height: 100%;
 }
-.middle-left,.middle-right{
-    width:50%;
+
+.middle-left,
+.middle-right {
+    width: 50%;
+    height: 33%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -82,15 +88,23 @@ body{
     gap: 5px;
     font-size: 14px;
 }
+
+input {
+    border-radius: 2px;
+    width: 175px;
+    height: 15px;
+    border: none;
+}
+
+.pass input:invalid {
+    border: 2px solid red;
+}
 .bottom{
     padding-top: 50px;
     padding-left: 50px;
 }
 .bot-para{
     padding-top: 20px;
-}
-input:focus{
-    border: 5px solid steelblue;
 }
 a{
     text-decoration: none;
