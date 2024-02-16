@@ -8,7 +8,12 @@
 </head>
 <body>
     <div class="container">
-        <div class="left-side">
+        <div class="left-side">       
+            <div class="left-side-container">
+                <div class="logo-wrapper">
+                    <img src="../../Pictures/Logos/odin-lined.png" height="150px" width="130px">
+                </div>
+            </div>
         </div>
         <div class="right-side">
             <div class="upper">
@@ -22,15 +27,15 @@
                 <form class="fifty">
                     <div class="middle-left">
                         <label for="first_name">FIRST NAME</label>
-                        <input type="text" name="first_name" id="first_name">
+                        <input type="text" name="first_name" id="first_name" required>
                     </div>
                     <div class="middle-right">
                         <label for="last_name">LAST NAME</label>
-                        <input type="text" name="last_name" id="last_name">
+                        <input type="text" name="last_name" id="last_name" required>
                     </div>
                     <div class="middle-left">
                         <label for="email">EMAIL</label>
-                        <input type="email" name="email" id="email">
+                        <input type="email" name="email" id="email" required>
                     </div>
                     <div class="middle-right">
                         <label for="phone_number">PHONE NUMBER</label>
@@ -38,17 +43,17 @@
                     </div>
                     <div class="middle-left">
                         <label for="password">PASSWORD</label>
-                        <input type="password" name="password" id="password">
+                        <input type="password" name="password" id="password" required>
                     </div>
                     <div class="middle-right">
                         <label for="password">CONFIRM PASSWORD</label>
-                        <input type="password" name="password" id="password">
+                        <input type="password" name="password" id="password" required>
                     </div>
-                </form>
             </div>
             <div class="bottom">
-                <button class="glow">Create Account</button>
+                <button type="submit" class="glow">Create Account</button>
                 <p class="bot-para">Already have an account? <a href="#">Log in</a></p>
+            </form>
             </div>
         </div>
     </div>
